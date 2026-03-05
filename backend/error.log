@@ -1,0 +1,93 @@
+[2026-03-01T19:44:42.101Z] Upload Error: Cast to ObjectId failed for value "sample-2" (type string) at path "_id" for model "Shop"
+CastError: Cast to ObjectId failed for value "sample-2" (type string) at path "_id" for model "Shop"
+    at SchemaObjectId.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async uploadPrescription (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\controllers\prescriptionController.js:29:22)
+[2026-03-02T07:21:36.880Z] Upload Error: Cast to ObjectId failed for value "sample-5" (type string) at path "_id" for model "Shop"
+CastError: Cast to ObjectId failed for value "sample-5" (type string) at path "_id" for model "Shop"
+    at SchemaObjectId.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async uploadPrescription (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\controllers\prescriptionController.js:29:22)
+[2026-03-02T07:28:43.095Z] Upload Error: Cast to ObjectId failed for value "sample-5" (type string) at path "_id" for model "Shop"
+CastError: Cast to ObjectId failed for value "sample-5" (type string) at path "_id" for model "Shop"
+    at SchemaObjectId.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async uploadPrescription (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\controllers\prescriptionController.js:60:22)
+[2026-03-02T08:06:09.723Z] Upload Error: E11000 duplicate key error collection: medismart.shops index: owner_1 dup key: { owner: ObjectId('69a524115f2ce3d8e2255efb') }
+MongoServerError: E11000 duplicate key error collection: medismart.shops index: owner_1 dup key: { owner: ObjectId('69a524115f2ce3d8e2255efb') }
+    at InsertOneOperation.handleOk (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at tryOperation (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\execute_operation.js:214:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\execute_operation.js:78:16)
+    at async Collection.insertOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\collection.js:154:16)
+[2026-03-02T08:25:34.505Z] Upload Error: E11000 duplicate key error collection: medismart.shops index: owner_1 dup key: { owner: ObjectId('69a524115f2ce3d8e2255efb') }
+MongoServerError: E11000 duplicate key error collection: medismart.shops index: owner_1 dup key: { owner: ObjectId('69a524115f2ce3d8e2255efb') }
+    at InsertOneOperation.handleOk (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at tryOperation (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\execute_operation.js:214:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\execute_operation.js:78:16)
+    at async Collection.insertOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\collection.js:154:16)
+[2026-03-02T08:26:15.264Z] Upload Error: E11000 duplicate key error collection: medismart.shops index: owner_1 dup key: { owner: ObjectId('69a524115f2ce3d8e2255efb') }
+MongoServerError: E11000 duplicate key error collection: medismart.shops index: owner_1 dup key: { owner: ObjectId('69a524115f2ce3d8e2255efb') }
+    at InsertOneOperation.handleOk (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at tryOperation (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\execute_operation.js:214:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async executeOperation (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\operations\execute_operation.js:78:16)
+    at async Collection.insertOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongodb\lib\collection.js:154:16)
+[2026-03-02T09:04:36.646Z] Upload Error: Cast to ObjectId failed for value "sample-4" (type string) at path "_id" for model "Shop"
+CastError: Cast to ObjectId failed for value "sample-4" (type string) at path "_id" for model "Shop"
+    at SchemaObjectId.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async uploadPrescription (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\controllers\prescriptionController.js:60:22)
+[2026-03-02T09:04:45.659Z] Upload Error: Cast to ObjectId failed for value "sample-4" (type string) at path "_id" for model "Shop"
+CastError: Cast to ObjectId failed for value "sample-4" (type string) at path "_id" for model "Shop"
+    at SchemaObjectId.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async uploadPrescription (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\controllers\prescriptionController.js:60:22)
+[2026-03-02T09:04:47.544Z] Upload Error: Cast to ObjectId failed for value "sample-4" (type string) at path "_id" for model "Shop"
+CastError: Cast to ObjectId failed for value "sample-4" (type string) at path "_id" for model "Shop"
+    at SchemaObjectId.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schema\objectId.js:253:11)
+    at SchemaType.applySetters (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1288:12)
+    at SchemaType.castForQuery (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\schemaType.js:1724:17)
+    at cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:5060:12)
+    at Query._castConditions (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2374:10)
+    at model.Query._findOne (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:2697:8)
+    at model.Query.exec (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\node_modules\mongoose\lib\query.js:4627:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async uploadPrescription (C:\Users\vishnu s nair\OneDrive\Desktop\medismart\backend\controllers\prescriptionController.js:60:22)
