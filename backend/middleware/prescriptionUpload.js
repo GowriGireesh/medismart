@@ -1,7 +1,7 @@
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const AWS = require('aws-sdk');
+const { S3Client } = require('@aws-sdk/client-s3');
 const multerS3 = require('multer-s3');
 
 let storage;
@@ -13,10 +13,12 @@ const isS3Configured = process.env.AWS_S3_BUCKET_NAME &&
 
 if (isS3Configured) {
     console.log("🚀 S3 Storage Initialized for Prescriptions");
-    const s3 = new AWS.S3({
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-        region: process.env.AWS_REGION,
+    const s3 = new S3Client({
+        region: process.env.AWS_REGION || 'us-east-1',
+        credentials: {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        },
     });
 
     storage = multerS3({

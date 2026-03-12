@@ -98,4 +98,35 @@ const updateMyShop = async (req, res) => {
     }
 };
 
-module.exports = { registerShop, getMyShop, updateMyShop };
+// ─── ADMIN: GET ALL SHOPS ─────────────────────────────────────
+// GET /api/shop/all  (protected, adminOnly)
+const getAllShops = async (req, res) => {
+    try {
+        const shops = await shopRepository.findAll();
+        res.status(200).json({ success: true, shops });
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'Server error fetching all shops' });
+    }
+};
+
+// ─── ADMIN: UPDATE SHOP STATUS ───────────────────────────────
+// PUT /api/shop/:id/status  (protected, adminOnly)
+const updateShopStatus = async (req, res) => {
+    try {
+        const { status, adminNote } = req.body;
+        if (!['approved', 'rejected', 'pending'].includes(status)) {
+            return res.status(400).json({ success: false, message: 'Invalid status' });
+        }
+
+        const shop = await shopRepository.updateStatus(req.params.id, status, adminNote);
+        if (!shop) {
+            return res.status(404).json({ success: false, message: 'Shop not found' });
+        }
+
+        res.status(200).json({ success: true, message: `Shop ${status} successfully`, shop });
+    } catch (error) {
+        res.status(500).json({ success: false, message: 'Server error updating shop status' });
+    }
+};
+
+module.exports = { registerShop, getMyShop, updateMyShop, getAllShops, updateShopStatus };

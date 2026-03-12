@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { registerShop, getMyShop, updateMyShop } = require('../controllers/shopController');
-const { protect } = require('../middleware/authMiddleware');
+const { registerShop, getMyShop, updateMyShop, getAllShops, updateShopStatus } = require('../controllers/shopController');
+const { protect, adminOnly } = require('../middleware/authMiddleware');
 const upload = require('../middleware/uploadMiddleware');
 const Shop = require('../models/Shop');
 
@@ -26,5 +26,12 @@ router.get('/my-profile', protect, getMyShop);
 // PUT /api/shop/my-profile  →  Update your shop details
 router.put('/my-profile', protect, upload.single('document'), updateMyShop);
 
-module.exports = router;
+// ─── ADMIN ROUTES ─────────────────────────────────────────────
 
+// GET /api/shop/all  →  Admin: View all shops
+router.get('/all', protect, adminOnly, getAllShops);
+
+// PUT /api/shop/:id/status  →  Admin: Approve/Reject shop
+router.put('/:id/status', protect, adminOnly, updateShopStatus);
+
+module.exports = router;

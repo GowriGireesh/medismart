@@ -8,10 +8,10 @@ const uploadPrescription = async (req, res) => {
         console.log('Upload Request Body:', req.body);
         console.log('Upload Request File:', req.file);
 
-        const { shopId, note, patientName, patientPhone, patientEmail, patientAge, patientAddress, patientGender } = req.body;
+        const { shopId, note, patientName, patientPhone, patientEmail, patientAge, patientAddress, patientGender, existingImagePath } = req.body;
 
-        // Validate: file must be uploaded
-        if (!req.file) {
+        // Validate: file OR existingImagePath must be provided
+        if (!req.file && !existingImagePath) {
             return res.status(400).json({ success: false, message: 'Please upload a prescription image or PDF.' });
         }
 
@@ -69,7 +69,7 @@ const uploadPrescription = async (req, res) => {
         const prescription = await Prescription.create({
             user: req.user.id,
             shop: finalShopId,
-            imagePath: req.file.location || `/uploads/prescriptions/${req.file.filename}`,
+            imagePath: req.file ? (req.file.location || `/uploads/prescriptions/${req.file.filename}`) : existingImagePath,
             note: note || '',
             patientName,
             patientPhone,
@@ -121,7 +121,7 @@ const getShopPrescriptions = async (req, res) => {
         }
 
         const prescriptions = await Prescription.find({ shop: shop._id })
-            .select('-prescription') // original field was not there, but let's be safe
+            .populate('user', 'name email')
             .sort({ createdAt: -1 });
 
         res.status(200).json({ success: true, prescriptions });
